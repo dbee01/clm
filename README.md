@@ -6,13 +6,13 @@ Our Customer List Management app gives you all the info your need to strike up a
 
 Our simple app features:
 
-* auto-save functionality
 * note taking on page
 * click-to-call functionality
 * relevant talking points
 * key business info eg. name, website, description
 * a list of key business competitors
 * a status setting for you to update leads as you click
+* auto-save functionality
 
 It's a bash script that reads the Google Map .ndjson files scraped by https://github.com/omkarcloud/google-maps-scraper written by https://www.omkar.cloud and @https://www.omkar.cloud/botasaurus/ . it then extracts the data and turns it into a Customer List Management html + JS file
 
