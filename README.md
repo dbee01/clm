@@ -14,10 +14,7 @@ Our simple app features:
 * a list of key business competitors
 * a status setting for you to update leads as you click
 
-  
-A simple customer-list-management js dom app produced from a bash shell script and a botasaurus scrape of Google Maps business info for your chosen keywords
-
-It's a bash script that reads the Google Map ndjson files scraped by https://github.com/omkarcloud/google-maps-scraper written by https://www.omkar.cloud and @https://www.omkar.cloud/botasaurus/ . it then extracts the data and turns it into a Customer List Management html + JS file
+It's a bash script that reads the Google Map .ndjson files scraped by https://github.com/omkarcloud/google-maps-scraper written by https://www.omkar.cloud and @https://www.omkar.cloud/botasaurus/ . it then extracts the data and turns it into a Customer List Management html + JS file
 
 Screenshot:
 
