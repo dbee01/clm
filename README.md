@@ -28,7 +28,7 @@ I'll create your custom list file with data from your chosen target market eg. '
 
 Run to test:
 
-1. Run the googlemapsextractor for your chosen target market eg. 'recruiters in Cork'
+1. Run the https://github.com/omkarcloud/google-maps-scraper for your chosen target market eg. 'recruiters in Cork'
 2. Run this repo shell script `keiste-customer-list-management.sh <input.ndjson> <output.html>`
 3. Open the html file in your desktop browser
 4. You may have to configure an application to run browser click-to-call links eg. Skype, Google Voice etc.
