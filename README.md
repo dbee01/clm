@@ -30,7 +30,7 @@ https://keiste.com/wp-content/uploads/2025/06/recruiter-cork.html
 run to test:
 
 1. Run the googlemapsextractor for your chosen target market eg. 'recruiters in Cork'
-2. Run this repo shell script `keiste-customer-management-list.sh <input.ndjson> <output.html>`
+2. Run this repo shell script `keiste-customer-list-management.sh <input.ndjson> <output.html>`
 3. Open the html file in your desktop browser
 4. You may have to configure an application to run browser click-to-call links eg. Skype, Google Voice etc.
 
