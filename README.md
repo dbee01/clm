@@ -1,6 +1,6 @@
 # customer list management platform
 
-tired of cold emailing leads? need a better way of making real personal B2B connections? 
+Tired of cold emailing leads? need a better way of making real personal B2B connections? 
 
 Our Customer List Management app gives you all the info your need to strike up a conversation with a business and impress the gatekeeper eg. receptionist or secretary. Giving you a much better chance of being considered by the decision maker.
 
@@ -15,23 +15,25 @@ Our simple app features:
 * a status setting for you to update leads as you click
 
   
-a simple customer-list-management js dom app produced from a bash shell script and a botasaurus scrape of Google Maps business info for your chosen keywords
+A simple customer-list-management js dom app produced from a bash shell script and a botasaurus scrape of Google Maps business info for your chosen keywords
 
-it's a bash script that reads the Google Map ndjson files scraped by https://github.com/omkarcloud/google-maps-scraper written by https://www.omkar.cloud and @https://www.omkar.cloud/botasaurus/ . it then extracts the data and turns it into a Customer List Management html + JS file
+It's a bash script that reads the Google Map ndjson files scraped by https://github.com/omkarcloud/google-maps-scraper written by https://www.omkar.cloud and @https://www.omkar.cloud/botasaurus/ . it then extracts the data and turns it into a Customer List Management html + JS file
 
-screenshot:
+Screenshot:
 
 https://ibb.co/tPXZBM1Y
 
-live demo:
+Live demo:
 
 https://keiste.com/wp-content/uploads/2025/06/recruiter-cork.html
 
-run to test:
+I'll create your custom list file with data from your chosen target market eg. 'HVAC in Denver' for a small fee. Contact me at info@keiste.com
+
+Run to test:
 
 1. Run the googlemapsextractor for your chosen target market eg. 'recruiters in Cork'
 2. Run this repo shell script `keiste-customer-list-management.sh <input.ndjson> <output.html>`
 3. Open the html file in your desktop browser
 4. You may have to configure an application to run browser click-to-call links eg. Skype, Google Voice etc.
 
-contact me at info@keiste.com if you are looking for support
+Contact me at info@keiste.com if you are looking for support
