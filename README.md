@@ -1,4 +1,20 @@
 # customer list management platform
+
+tired of cold emailing leads? need a better way of making real personal B2B connections? 
+
+Our Customer List Management app gives you all the info your need to strike up a conversation with a business and impress the gatekeeper eg. receptionist or secretary. Giving you a much better chance of being considered by the decision maker.
+
+Our simple app features:
+
+* auto-save functionality
+* note taking on page
+* click-to-call functionality
+* relevant talking points
+* key business info eg. name, website, description
+* a list of key business competitors
+* a status setting for you to update leads as you click
+
+  
 a simple customer-list-management js dom app produced from a bash shell script and a botasaurus scrape of Google Maps business info for your chosen keywords
 
 it's a bash script that reads the Google Map ndjson files scraped by https://github.com/omkarcloud/google-maps-scraper written by https://www.omkar.cloud and @https://www.omkar.cloud/botasaurus/ . it then extracts the data and turns it into a Customer List Management html + JS file
