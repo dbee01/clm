@@ -5,7 +5,7 @@ it's a bash script that reads the Google Map ndjson files scraped by https://git
 
 screenshot:
 
-https://ibb.co/tpjq3cZB
+https://ibb.co/tPXZBM1Y
 
 live demo:
 
