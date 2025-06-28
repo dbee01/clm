@@ -1,4 +1,4 @@
-# clm
+# customer list management platform
 a simple customer-list-management js dom app produced from a bash shell script and a botasaurus scrape of Google Maps business info for your chosen keywords
 
 it's a bash script that reads the Google Map ndjson files scraped by @googlemapsextractor by @omcloud and botasaurus. it then extracts the data and turns it into a Customer List Management html + JS file
