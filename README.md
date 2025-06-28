@@ -2,7 +2,7 @@
 
 Tired of cold emailing leads? need a better way of making real personal B2B connections? 
 
-Our Customer List Management app gives you all the info your need to strike up a conversation with a business and impress the gatekeeper eg. receptionist or secretary. Giving you a much better chance of being considered by the decision maker.
+Our Customer List Management app gives you all the info your need to strike up a conversation with a business and impress the gatekeeper eg. receptionist or secretary or the decision maker with your knowledge of their company.
 
 Our simple app features:
 
