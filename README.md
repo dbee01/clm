@@ -18,7 +18,7 @@ It's a bash script that reads the Google Map .ndjson files scraped by https://gi
 
 Screenshot:
 
-https://ibb.co/tPXZBM1Y
+https://ibb.co/Vc40d8N2
 
 Live demo:
 
