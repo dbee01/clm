@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Database Workspace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style href="../css/main.css" rel="stylesheet">
+  <script src="../js/main.js"></script> 
+  <script src="../js/log.js"></script> 
+  <script src="../js/analytics.js"></script> 
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Company Database Workspace</h2>
+      <div class="header-buttons">
+        <button>Add New</button>
+        <button>Export</button>
+      </div>
+    </div>
+
+    <div class="section-title">Company Records</div>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search companies..." />
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Company Name</th>
+          <th>Description</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Website</th>
+          <th>Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+		
+	<template>
+
+      </tbody>
+    </table>
+
+    <div class="record-count">Showing 4 of 24 companies</div>
+
+    <div class="pagination">
+      <button>Previous</button>
+      <button>1</button>
+      <button class="active">2</button>
+      <button>3</button>
+      <button>Next</button>
+    </div>
+  </div>
+
+  <h3>📋 Global Interaction Log</h3>
+  <div id="global-log" style="font-family: monospace; background: #f5f5f5; padding: 10px; border: 1px solid #ccc; max-height: 300px; overflow-y: auto;"></div>
+  <button onclick="window.location.href='analytics.html'">Open Analytics</button>
+
+</body>
+</html>
+
