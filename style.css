@@ -1,0 +1,35 @@
+    body { font-family: 'Montserrat', sans-serif; margin: 20px; background-color: #FAF9F6; }
+    table { border-collapse: collapse; width: 100%; color: #343231; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; vertical-align: top; font-size: 16px; }
+    th { background-color: #f4f4f4; }
+    a { text-decoration: none; color: blue; }
+    input[type='text'] { width: 100%; box-sizing: border-box; }
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+    }
+    .save-button {
+      padding: 8px 16px;
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    td.log-column { width: 30%; }
+    .log-history {
+      font-size: 0.9em;
+      margin-top: 6px;
+      color: #555;
+      white-space: pre-line;
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      padding: 6px;
+      background: #f9f9f9;
+      white-space: pre-wrap;
+      min-height: 80px;
+    }
+
