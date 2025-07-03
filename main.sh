@@ -140,8 +140,19 @@ done
 
 # --- Inject table + star CSS into template ---
 mkdir -p "$(dirname "$OUTPUT_HTML")"
-awk -v html_table="$(cat "$TABLE_TMP")" '
-  { gsub(/{table}/, html_table "\n"); print }
-' "$TEMPLATE_HTML" > "$OUTPUT_HTML"
+
+awk '
+  BEGIN {
+    while ((getline line < table_file) > 0) {
+      html_table = html_table line "\n"
+    }
+    close(table_file)
+  }
+  {
+    gsub(/\{table\}/, html_table)
+    print
+  }
+' table_file="$TABLE_TMP" "$TEMPLATE_HTML" > "$OUTPUT_HTML"
+
 
 rm "$TABLE_TMP"
