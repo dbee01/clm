@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Company Database Workspace</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="../js/main.js"></script>
+</head>
+<body style="font-family: Roboto, Montserrat, sans-serif; background: #f1f5f9; margin: 0; padding: 20px;">
+
+  <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
+
+    <div style="display: flex; justify-content: space-between; align-items: center; background: linear-gradient(90deg, #3b82f6, #2563eb); color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+      <h2 style="margin: 0; font-size: 1.5rem; font-weight: 700;">Company Database Workspace</h2>
+      <div>
+        <button style="background: #60a5fa; border: none; color: white; padding: 8px 14px; margin-left: 10px; border-radius: 6px; font-weight: 500; cursor: pointer;">Add New</button>
+        <button style="background: #60a5fa; border: none; color: white; padding: 8px 14px; margin-left: 10px; border-radius: 6px; font-weight: 500; cursor: pointer;">Export</button>
+      </div>
+    </div>
+
+    <div style="font-weight: 600; font-size: 1.2rem; margin-bottom: 10px;">Company Records</div>
+<!--
+    <div style="margin-bottom: 20px;">
+      <input type="text" placeholder="Search companies..." style="width: 100%; padding: 10px; font-size: 1rem; border: 1px solid #ddd; border-radius: 6px;" />
+    </div>
+-->
+    <!-- 3. X-axis scroll for table -->
+    <div class="table-x-scroll">
+      <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+          <tr>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Company</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Description</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Rating</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Website</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Phone</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Email</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Keywords</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Competitors</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Status</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Notes</th>
+            <th style="background: #3b82f6; color: white; text-align: center; padding: 12px; font-weight: 600;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Example row with new features -->
+                    {table}
+        </tbody>
+      </table>
+    </div>
+
+    <div style="font-size: 0.9rem; color: #6b7280; margin-bottom: 10px;">Showing 4 of 24 companies</div>
+
+    <div>
+      <button style="margin-right: 5px; padding: 6px 12px; border: 1px solid #ccc; background: white; border-radius: 4px; cursor: pointer;">Previous</button>
+      <button style="margin-right: 5px; padding: 6px 12px; border: 1px solid #ccc; background: white; border-radius: 4px; cursor: pointer;">1</button>
+      <button style="margin-right: 5px; padding: 6px 12px; border: 1px solid #3b82f6; background: #3b82f6; color: white; border-radius: 4px; cursor: pointer;">2</button>
+      <button style="margin-right: 5px; padding: 6px 12px; border: 1px solid #ccc; background: white; border-radius: 4px; cursor: pointer;">3</button>
+      <button style="margin-right: 5px; padding: 6px 12px; border: 1px solid #ccc; background: white; border-radius: 4px; cursor: pointer;">Next</button>
+    </div>
+  </div>
+
+  <h3 style="font-size: 1.2rem; margin-top: 40px;">📋 Global Interaction Log</h3>
+  <div id="global-log" style="font-family: monospace; background: #f5f5f5; padding: 10px; border: 1px solid #ccc; max-height: 300px; overflow-y: auto;">Waiting for events...</div>
+  <button onclick="window.location.href='analytics.html'" style="margin-top: 10px; padding: 8px 14px; border: none; background: #2563eb; color: white; border-radius: 6px; cursor: pointer;">Open Analytics</button>
+
+</body>
+</html>
