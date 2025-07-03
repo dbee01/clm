@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title>Company Database Workspace</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="../js/main.js"></script>
 </head>
 <body style="font-family: Roboto, Montserrat, sans-serif; background: #f1f5f9; margin: 0; padding: 20px;">
 
@@ -17,481 +19,487 @@
     </div>
 
     <div style="font-weight: 600; font-size: 1.2rem; margin-bottom: 10px;">Company Records</div>
-
+<!--
     <div style="margin-bottom: 20px;">
       <input type="text" placeholder="Search companies..." style="width: 100%; padding: 10px; font-size: 1rem; border: 1px solid #ddd; border-radius: 6px;" />
     </div>
-
-    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px;">
-      <thead>
-        <tr>
-          <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Company</th>
-          <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Description</th>
-          <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Rating</th>
-          <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Website</th>
-          <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Phone</th>
-          <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Email</th>
-          <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Keywords</th>
-          <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Competitors</th>
-          <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Status</th>
-          <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr data-key="Premier_Inn_Cork_City_Centre_Hotel">
+-->
+    <!-- 3. X-axis scroll for table -->
+    <div class="table-x-scroll">
+      <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+          <tr>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Company</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Description</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Rating</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Website</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Phone</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Email</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Keywords</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Competitors</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Status</th>
+            <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Notes</th>
+            <th style="background: #3b82f6; color: white; text-align: center; padding: 12px; font-weight: 600;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Example row with new features -->
+                      <tr data-key="Premier_Inn_Cork_City_Centre_Hotel">
     <td class="">Premier Inn Cork City Centre Hotel</td>
+    <td class="">no description</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="https://www.premierinn.com/gb/en/hotels/republic-of-ireland/cork/cork/cork-city-centre.html?cid=GLBC_CRKCTY" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353216037013" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 603 7013"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
     <td class=""></td>
-    <td class="">4.3</td>
-    <td class=""><a href="https://www.premierinn.com/gb/en/hotels/republic-of-ireland/cork/cork/cork-city-centre.html?cid=GLBC_CRKCTY" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353216037013" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 603 7013"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">parking (29), check in (18), desk (16), bar (13), walk (11), fire alarm (10), pay (10), phone (9), email (7), bag (6)</td>
+    <td class="">parking, check in, desk, bar, walk, fire alarm, pay, phone, email, bag</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Leonardo_Hotel_Cork">
     <td class="">Leonardo Hotel Cork</td>
     <td class="">Warmly decorated rooms in a modest riverfront hotel offering a casual restaurant with a bar.</td>
-    <td class="">4.1</td>
-    <td class=""><a href="https://www.leonardo-hotels.com/cork/leonardo-hotel-cork" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214943000" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 494 3000"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">bar (80), car park (57), walk (56), river (39), bus station (25), buffet (25), desk (20), traffic (17), pay (15), city center (5)</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="https://www.leonardo-hotels.com/cork/leonardo-hotel-cork" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353214943000" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 494 3000"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">bar, car park, walk, river, bus station, buffet, desk, traffic, pay, city center</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Moxy_Cork">
     <td class="">Moxy Cork</td>
+    <td class="">no description</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star half">&#9733;</span></div></td>
+    <td class=""><a href="https://www.marriott.com/en-us/hotels/orkox-moxy-cork/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353212037833" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 203 7833"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
     <td class=""></td>
-    <td class="">4.5</td>
-    <td class=""><a href="https://www.marriott.com/en-us/hotels/orkox-moxy-cork/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353212037833" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 203 7833"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">cocktails (13), shower (10), price (9), desk (7), parking (7), sleep (6), gym (5), games (5), coffee (5), motion detector (3)</td>
+    <td class="">cocktails, shower, price, desk, parking, sleep, gym, games, coffee, motion detector</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="The_Metropole_Hotel">
     <td class="">The Metropole Hotel</td>
-    <td class="">Modern quarters in a polished hotel in a Victorian building offering an eatery {template} a cocktail bar.</td>
-    <td class="">4.3</td>
-    <td class=""><a href="http://www.themetropolehotel.ie/" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214643700" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 464 3700"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">river (21), lobby (21), concierge (20), afternoon tea (11), festival (11), cork (10), leisure centre (8), parking garage (7), barman (7), old fashioned (6)</td>
+    <td class="">Modern quarters in a polished hotel in a Victorian building offering an eatery {table} a cocktail bar.</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="http://www.themetropolehotel.ie/" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353214643700" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 464 3700"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">river, lobby, concierge, afternoon tea, festival, cork, leisure centre, parking garage, barman, old fashioned</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="The_Imperial_Hotel___SPA">
-    <td class="">The Imperial Hotel {template} SPA</td>
+    <td class="">The Imperial Hotel {table} SPA</td>
     <td class="">Refined hotel with upscale rooms, a chic spa and varied dining, including afternoon tea.</td>
-    <td class="">4.4</td>
-    <td class=""><a href="https://www.imperialhotelcork.com/?utm_source=GMBlisting{template}utm_medium=organic" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214274040" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 427 4040"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">cork (43), concierge (19), afternoon tea (12), table service (11), thyme (10), carvery (10), champagne (10), christmas decorations (9), sketch (9), the english market (6)</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="https://www.imperialhotelcork.com/?utm_source=GMBlisting{table}utm_medium=organic" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353214274040" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 427 4040"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">cork, concierge, afternoon tea, table service, thyme, carvery, champagne, christmas decorations, sketch, the english market</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Ashley_Hotel">
     <td class="">Ashley Hotel</td>
-    <td class="">Traditional lodging featuring simple rooms, a quaint restaurant/bar {template} a terrace, plus free Wi-Fi.</td>
-    <td class="">3.1</td>
-    <td class=""><a href="https://www.ashleyhotel.com/" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214501518" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 450 1518"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">shower (23), parking (15), comfortable (15), walk (14), cork (11), pubs (9), hostel (8), carpet (8), stairs (8), luggage (5)</td>
+    <td class="">Traditional lodging featuring simple rooms, a quaint restaurant/bar {table} a terrace, plus free Wi-Fi.</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="https://www.ashleyhotel.com/" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353214501518" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 450 1518"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">shower, parking, comfortable, walk, cork, pubs, hostel, carpet, stairs, luggage</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Clayton_Hotel_Cork_City">
     <td class="">Clayton Hotel Cork City</td>
-    <td class="">Riverside hotel with modest rooms offering casual Asian dining, an indoor pool {template} a fitness centre.</td>
-    <td class="">4.3</td>
-    <td class=""><a href="https://ad.doubleclick.net/ddm/trackclk/N1074062.3844254CLAYTONHOTELS-OR/B24186235.278597795;dc_trk_aid=472925178;dc_trk_cid=135202496;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214224900" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 422 4900"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">bar (194), comfortable (101), river (71), reception (52), balcony (50), gym (48), jacuzzi (19), leisure centre (16), homeless shelter (6), lane (5)</td>
+    <td class="">Riverside hotel with modest rooms offering casual Asian dining, an indoor pool {table} a fitness centre.</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="https://ad.doubleclick.net/ddm/trackclk/N1074062.3844254CLAYTONHOTELS-OR/B24186235.278597795;dc_trk_aid=472925178;dc_trk_cid=135202496;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353214224900" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 422 4900"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">bar, comfortable, river, reception, balcony, gym, jacuzzi, leisure centre, homeless shelter, lane</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Maldron_Hotel_Shandon_Cork_City">
     <td class="">Maldron Hotel Shandon Cork City</td>
-    <td class="">Contemporary rooms with free Wi-Fi in a modern hotel with relaxed dining, an indoor pool {template} a gym.</td>
-    <td class="">4.1</td>
-    <td class=""><a href="https://ad.doubleclick.net/ddm/trackclk/N1074062.3913567MALDRONHOTELS-OR/B24608539.282308148;dc_trk_aid=476179753;dc_trk_cid=137768194;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214529200" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 452 9200"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">bar (96), window (35), gym (30), fan (20), family room (11), leisure centre (9), cemetery (9), great room (6), parking space (5), steam room (5)</td>
+    <td class="">Contemporary rooms with free Wi-Fi in a modern hotel with relaxed dining, an indoor pool {table} a gym.</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="https://ad.doubleclick.net/ddm/trackclk/N1074062.3913567MALDRONHOTELS-OR/B24608539.282308148;dc_trk_aid=476179753;dc_trk_cid=137768194;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353214529200" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 452 9200"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">bar, window, gym, fan, family room, leisure centre, cemetery, great room, parking space, steam room</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Maldron_Hotel_South_Mall_Cork_City">
     <td class="">Maldron Hotel South Mall Cork City</td>
-    <td class="">Relaxed rooms in an informal hotel offering 2 restaurants (1 with a bar), a cafe {template} free Wi-Fi.</td>
-    <td class="">4.4</td>
-    <td class=""><a href="https://ad.doubleclick.net/ddm/trackclk/N1074062.3913567MALDRONHOTELS-OR/B24608539.282337801;dc_trk_aid=476089070;dc_trk_cid=137805500;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353212037000" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 203 7000"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">bar (71), comfortable (62), dinner (45), cafe (22), value (13), discount (11), meeting (9), fire alarm (7), bean (5), concert (5)</td>
+    <td class="">Relaxed rooms in an informal hotel offering 2 restaurants (1 with a bar), a cafe {table} free Wi-Fi.</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="https://ad.doubleclick.net/ddm/trackclk/N1074062.3913567MALDRONHOTELS-OR/B24608539.282337801;dc_trk_aid=476089070;dc_trk_cid=137805500;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353212037000" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 203 7000"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">bar, comfortable, dinner, cafe, value, discount, meeting, fire alarm, bean, concert</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Hotel_Isaacs_Cork">
     <td class="">Hotel Isaacs Cork</td>
-    <td class="">Chic rooms {template} apartments with free Wi-Fi, plus a restaurant with a courtyard waterfall.</td>
-    <td class="">4.4</td>
-    <td class=""><a href="https://www.hotelisaacscork.com/?utm_source=googlemybusiness{template}utm_medium=organic" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214500011" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 450 0011"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">waterfall (60), noise (44), cask (37), apartment (31), walking (27), cocktails (24), desk (19), pub (16), train station (9), dyson (5)</td>
+    <td class="">Chic rooms {table} apartments with free Wi-Fi, plus a restaurant with a courtyard waterfall.</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="https://www.hotelisaacscork.com/?utm_source=googlemybusiness{table}utm_medium=organic" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353214500011" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 450 0011"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">waterfall, noise, cask, apartment, walking, cocktails, desk, pub, train station, dyson</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Residence_Inn_Cork">
     <td class="">Residence Inn Cork</td>
+    <td class="">no description</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star half">&#9733;</span></div></td>
+    <td class=""><a href="https://www.marriott.com/en-us/hotels/orkri-residence-inn-cork/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353212037844" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 203 7844"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
     <td class=""></td>
-    <td class="">4.8</td>
-    <td class=""><a href="https://www.marriott.com/en-us/hotels/orkri-residence-inn-cork/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353212037844" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 203 7844"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">price (7), parking (6), gym (5), laundry (5), walking (5), kitchenette (3), the english market (2), detergent (2), dryer (2), periods (2)</td>
+    <td class="">price, parking, gym, laundry, walking, kitchenette, the english market, detergent, dryer, periods</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Cork_s_Vienna_Woods_Hotel_and_Holiday_Homes">
     <td class="">Cork's Vienna Woods Hotel and Holiday Homes</td>
-    <td class="">Classic quarters in a riverside hotel offering free Wi-Fi, plus a stylish bistro {template} a lounge/bar.</td>
-    <td class="">4.4</td>
-    <td class=""><a href="http://www.viennawoodshotel.com/" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214556800" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 455 6800"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">wedding (99), bar (55), dining (13), afternoon tea (10), meeting (9), communion (7), sunday lunch (6), comfy (6), christening (6), starters (5)</td>
+    <td class="">Classic quarters in a riverside hotel offering free Wi-Fi, plus a stylish bistro {table} a lounge/bar.</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="http://www.viennawoodshotel.com/" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353214556800" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 455 6800"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">wedding, bar, dining, afternoon tea, meeting, communion, sunday lunch, comfy, christening, starters</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="The_Address_Hotel_Cork">
     <td class="">The Address Hotel Cork</td>
     <td class="">Relaxed rooms with free Wi-Fi in a grand Victorian building, plus a restaurant and an exercise room.</td>
-    <td class="">4.2</td>
-    <td class=""><a href="https://www.theaddresscork.com/" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214539000" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 453 9000"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">bar (69), walk (38), wedding (24), meal (22), lift (17), check in (16), carpet (14), the hill (9), ambassador (8), chicken wings (5)</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="https://www.theaddresscork.com/" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353214539000" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 453 9000"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">bar, walk, wedding, meal, lift, check in, carpet, the hill, ambassador, chicken wings</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="The_Dean_Cork">
     <td class="">The Dean Cork</td>
-    <td class="">Chic quarters in a hip hotel featuring a bar {template} a gym, plus a rooftop restaurant with city views.</td>
-    <td class="">4.4</td>
-    <td class=""><a href="https://thedean.ie/cork/?utm_source=Google%20My%20Business{template}utm_medium=organic{template}utm_campaign=GMB" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353212341200" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 234 1200"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">train station (57), cocktails (42), gym (42), sauna (24), wardrobe (17), music (17), record player (13), turntable (7), earplugs (7), smeg (5)</td>
+    <td class="">Chic quarters in a hip hotel featuring a bar {table} a gym, plus a rooftop restaurant with city views.</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="https://thedean.ie/cork/?utm_source=Google%20My%20Business{table}utm_medium=organic{table}utm_campaign=GMB" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353212341200" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 234 1200"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">train station, cocktails, gym, sauna, wardrobe, music, record player, turntable, earplugs, smeg</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Lancaster_Lodge">
     <td class="">Lancaster Lodge</td>
     <td class="">Unfussy riverfront hotel offering straightforward rooms, plus free Wi-Fi and parking.</td>
-    <td class="">4.3</td>
-    <td class=""><a href="http://www.lancasterlodge.com/" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214251125" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 425 1125"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">walking (32), comfortable (25), car park (18), cork (15), clean room (12), city centre (11), river (9), guest house (8), fan (7), comfy (6)</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="http://www.lancasterlodge.com/" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353214251125" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 425 1125"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">walking, comfortable, car park, cork, clean room, city centre, river, guest house, fan, comfy</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Destiny_Student_-_Broga_House_Cork">
     <td class="">Destiny Student - Broga House Cork</td>
-    <td class="">Streamlined rooms {template} studios in a modest hotel offering Wi-Fi {template} an industrial-chic lounge.</td>
-    <td class="">4.2</td>
-    <td class=""><a href="" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:0035314854479" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(01) 485 4479"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">kitchen (19), towels (11), money (11), sleep (11), hostel (8), budget (7), dorm (6), noise (6), earplugs (6), city centre (5)</td>
+    <td class="">Streamlined rooms {table} studios in a modest hotel offering Wi-Fi {table} an industrial-chic lounge.</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span></div></td>
+    <td class=""></td>
+    <td class=""><a href="tel:0035314854479" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(01) 485 4479"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">kitchen, towels, money, sleep, hostel, budget, dorm, noise, earplugs, city centre</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Yugo_Lee_Point_Summer_hotel">
     <td class="">Yugo Lee Point Summer hotel</td>
+    <td class="">no description</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="https://yugo.cloudbeds.com/" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353832008850" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="083 200 8850"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
     <td class=""></td>
-    <td class="">4.2</td>
-    <td class=""><a href="https://yugo.cloudbeds.com/" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353832008850" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="083 200 8850"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">students (2), pubs (2), kitchen (2)</td>
+    <td class="">students, pubs, kitchen</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="The_River_Lee_Hotel">
     <td class="">The River Lee Hotel</td>
-    <td class="">Upscale riverside hotel featuring a stylish restaurant {template} bar, plus an indoor pool {template} a gym.</td>
-    <td class="">4.6</td>
-    <td class=""><a href="https://www.doylecollection.com/hotels/the-river-lee-hotel?utm_source=google{template}utm_medium=organic{template}utm_campaign=google_local_the_river_lee_hotel" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214252700" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 425 2700"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">gym (43), cocktails (26), reception (23), cork (20), brunch (18), afternoon tea (10), eggs benedict (9), executive (9), sister (8), leisure centre (5)</td>
+    <td class="">Upscale riverside hotel featuring a stylish restaurant {table} bar, plus an indoor pool {table} a gym.</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star half">&#9733;</span></div></td>
+    <td class=""><a href="https://www.doylecollection.com/hotels/the-river-lee-hotel?utm_source=google{table}utm_medium=organic{table}utm_campaign=google_local_the_river_lee_hotel" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353214252700" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 425 2700"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">gym, cocktails, reception, cork, brunch, afternoon tea, eggs benedict, executive, sister, leisure centre</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Brú_Hostel">
     <td class="">Brú Hostel</td>
-    <td class="">Low-key dorms {template} private rooms with Wi-Fi, as well as a bar with nightly live music.</td>
-    <td class="">4.1</td>
-    <td class=""><a href="https://www.bruhostel.com/" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214559667" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 455 9667"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">bar (92), music (68), cork (39), beer (30), toast (14), cereal (10), ear plugs (9), dining room (8), open mic (7), refund (6)</td>
+    <td class="">Low-key dorms {table} private rooms with Wi-Fi, as well as a bar with nightly live music.</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="https://www.bruhostel.com/" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353214559667" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 455 9667"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">bar, music, cork, beer, toast, cereal, ear plugs, dining room, open mic, refund</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="The_Kingsley_Hotel">
     <td class="">The Kingsley Hotel</td>
-    <td class="">Upscale, contemporary hotel offering fine dining, a spa {template} an indoor pool, plus free Wi-Fi.</td>
-    <td class="">4.5</td>
-    <td class=""><a href="https://www.thekingsley.ie/?utm_source=GMBlisting{template}utm_medium=organic" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214800500" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 480 0500"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">spa (196), river (129), gym (47), afternoon tea (39), cork (27), treatment (21), wedding (18), scones (14), leisure centre (10), steam rooms (10)</td>
+    <td class="">Upscale, contemporary hotel offering fine dining, a spa {table} an indoor pool, plus free Wi-Fi.</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star half">&#9733;</span></div></td>
+    <td class=""><a href="https://www.thekingsley.ie/?utm_source=GMBlisting{table}utm_medium=organic" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353214800500" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 480 0500"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">spa, river, gym, afternoon tea, cork, treatment, wedding, scones, leisure centre, steam rooms</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Clayton_Hotel_Silver_Springs">
     <td class="">Clayton Hotel Silver Springs</td>
-    <td class="">Bright rooms {template} suites in a relaxed hotel offering a restaurant, a bar {template} a garden.</td>
-    <td class="">4</td>
-    <td class=""><a href="https://ad.doubleclick.net/ddm/trackclk/N1074062.3844254CLAYTONHOTELS-OR/B24186235.278896608;dc_trk_aid=472883077;dc_trk_cid=135253441;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214507533" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 450 7533"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">reception (39), menu (35), fan (23), conference centre (20), barman (15), cork (15), family room (12), leisure centre (11), glasses (9), carvery (5)</td>
+    <td class="">Bright rooms {table} suites in a relaxed hotel offering a restaurant, a bar {table} a garden.</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="https://ad.doubleclick.net/ddm/trackclk/N1074062.3844254CLAYTONHOTELS-OR/B24186235.278896608;dc_trk_aid=472883077;dc_trk_cid=135253441;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353214507533" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 450 7533"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">reception, menu, fan, conference centre, barman, cork, family room, leisure centre, glasses, carvery</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="The_Montenotte_Hotel__an_SLH_Hotel">
     <td class="">The Montenotte Hotel, an SLH Hotel</td>
-    <td class="">Upscale hotel with elegant quarters, a rooftop bar, a restaurant {template} a leisure centre with a pool.</td>
-    <td class="">4.5</td>
-    <td class=""><a href="https://www.themontenottehotel.com/?utm_source=knowledge-graph{template}utm_medium=organic{template}utm_campaign=gmb-link" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214530050" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 453 0050"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">gardens (49), spa (48), cinema (48), cocktails (35), gym (28), cork (19), leisure centre (10), afternoon tea (9), concierge (8), popcorn (6)</td>
+    <td class="">Upscale hotel with elegant quarters, a rooftop bar, a restaurant {table} a leisure centre with a pool.</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star half">&#9733;</span></div></td>
+    <td class=""><a href="https://www.themontenottehotel.com/?utm_source=knowledge-graph{table}utm_medium=organic{table}utm_campaign=gmb-link" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353214530050" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 453 0050"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">gardens, spa, cinema, cocktails, gym, cork, leisure centre, afternoon tea, concierge, popcorn</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Copley_Court___Summer_Accommodation_in_Cork">
     <td class="">Copley Court | Summer Accommodation in Cork</td>
-    <td class="">Copley Court offers the perfect alternative to a traditional hotel stay, providing affordable, cozy, and comfortable rooms with the vibrant city of Cork right on your doorstep. Whether you’re a solo traveler ready to explore the sights or part of a group eager to experience Cork's lively nightlife, Copley Court is the ideal place to stay.
+    <td class="">Copley Court offers the perfect alternative to a traditional hotel stay, providing affordable, cozy, and comfortable rooms with the vibrant city of Cork right on your doorstep.
 Our 24-hour reception is staffed by a knowledgeable and enthusiastic team, always on hand to offer recommendations on local attractions, events, and hidden gems to help you make the most of your time in the city.
-With a range of excellent features at an affordable price, Copley Court is designed to meet all your needs. So why wait? Check in, plug in, and unwind—your perfect stay begins at Copley Court.</td>
-    <td class="">2.5</td>
-    <td class=""><a href="http://www.copleycourt.ie/" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214590118" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 459 0118"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
+With a range of excellent features at an affordable price, Copley Court is designed to meet all your needs.</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star half">&#9733;</span><span class="star">&#9734;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="http://www.copleycourt.ie/" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
+    <td class=""><a href="tel:00353214590118" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 459 0118"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
     <td class=""></td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Oaklands_Bed_and_Breakfast">
     <td class="">Oaklands Bed and Breakfast</td>
+    <td class="">no description</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star half">&#9733;</span><span class="star">&#9734;</span></div></td>
     <td class=""></td>
-    <td class="">3.9</td>
-    <td class=""><a href="" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353214500578" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number="(021) 450 0578"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">walk (4), parking (3), hospitality (2), mold (2)</td>
+    <td class=""><a href="tel:00353214500578" class="phone-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" data-number="(021) 450 0578"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="svg-phone" ><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
+    <td class=""></td>
+    <td class="">walk, parking, hospitality, mold</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
   <tr data-key="Yugo_Amnis_House_-_Summer_Hotel">
     <td class="">Yugo Amnis House - Summer Hotel</td>
+    <td class="">no description</td>
+    <td class="rating-cell"><div class="star-rating"><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9734;</span><span class="star">&#9734;</span></div></td>
+    <td class=""><a href="https://yugo.cloudbeds.com/" target="_blank" class="website-link" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;font-size: 24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor" class="svg-web" ><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
     <td class=""></td>
-    <td class="">3.3</td>
-    <td class=""><a href="https://yugo.cloudbeds.com/" target="_blank" class="website-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M248 8C111 8 0 119 0 256s111 248 248 248S496 393 496 256 385 8 248 8zM45.2 176H150c-3.5 31.4-5.5 64.3-6.1 96H39.2c-2.3-10.3-3.6-21-3.6-32s1.3-21.7 3.6-32zM62.3 352H144c3.6 35.2 10.2 68.5 19.2 96H111.7C90.1 418.3 73.1 386.9 62.3 352zm81.7-192H61.7C73.1 125.1 90.1 93.7 111.7 64h51.5c-9 27.5-15.6 60.8-19.2 96zm104 288c-20.2-20.7-36.2-60.6-43.2-96h86.3c-7 35.4-23 75.3-43.2 96zm-43.2-128c-1.9-31.5-1.8-64.3 0-96h86.3c1.9 31.7 1.8 64.3 0 96h-86.3zm129.5 128c9-27.5 15.6-60.8 19.2-96h81.7c-10.8 34.9-27.8 66.3-49.4 96h-51.5zM345.3 256c-.6-31.7-2.6-64.6-6.1-96h104.9c2.3 10.3 3.6 21 3.6 32s-1.3 21.7-3.6 32H345.3zM319.5 64h51.5c21.6 29.7 38.6 61.1 49.4 96h-81.7c-3.6-35.2-10.2-68.5-19.2-96zM248 48c20.2 20.7 36.2 60.6 43.2 96h-86.3c7-35.4 23-75.3 43.2-96zM8 256c0-136.9 111.1-248 248-248s248 111.1 248 248-111.1 248-248 248S8 392.9 8 256z"/></svg></span></a></td>
-    <td class=""><a href="tel:00353" class="phone-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;" data-number=""><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M493.4 24.6l-104-24C373.7-4.8 358.1 4.5 353.5 19.5l-48 160c-4.2 14.2 1.8 29.3 14.7 37l60.7 35.1c-36.1 68.6-93.3 125.7-162 162l-35.1-60.7c-7.7-12.9-22.8-18.9-37-14.7l-160 48C4.5 358.1-4.8 373.7 0.6 387.4l24 104c3.3 14.2 16 24.6 30.6 24.6C417.3 512 512 417.3 512 256c0-14.6-10.4-27.3-24.6-30.6z"/></svg></span></a></td>
-    <td class=""><a href="mailto:" class="email-link" style="color: black; text-align: left; padding: 12px; font-weight: 400;"><span style="display: inline-block; width: 1em; height: 1em; vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M502.3 190.8L327.4 338.6c-17.8 14.7-43.1 14.7-60.9 0L9.7 190.8C3.7 185.8 0 178.6 0 171V96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v75c0 7.6-3.7 14.8-9.7 19.8zM0 216v200c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V216L352.7 363.3c-35.7 29.4-87.7 29.4-123.4 0L0 216z"/></svg></span></a></td>
-    <td class="">noise (3), door (3), sleep (3), dishwasher (2), utility room (2), aggressive (2), fire alarm (2), electricity (2), river (2), apartment (2)</td>
+    <td class=""></td>
+    <td class="">noise, door, sleep, dishwasher, utility room, aggressive, fire alarm, electricity, river, apartment</td>
     <td class=""></td>
     <td class=""><select class="status-select" data-default="open" style="color:white;font-weight:700;padding:12px;border-radius:20px;">
-	  <option value="open">Open</option>
-	  <option value="follow up">Follow Up</option>
-	  <option value="call back">Call Back</option>
-	  <option value="not interested">Not Interested</option>
-	</select></td>
-    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black; text-align: left; padding: 12px; font-weight: 400;" autocomplete="off" />
+          <option value="open">Open</option>
+          <option value="follow up">Follow Up</option>
+          <option value="call back">Call Back</option>
+          <option value="not interested">Not Interested</option>
+        </select></td>
+    <td class="log-column"><input type="text" placeholder="Add log..." class="log-input" style="color: black;text-align: left; padding: 12px; font-weight: 400; font-size: 16px;" autocomplete="off" />
               <div class="log-history"></div></td>
   </tr>
-      </tbody>
-    </table>
+
+        </tbody>
+      </table>
+    </div>
 
     <div style="font-size: 0.9rem; color: #6b7280; margin-bottom: 10px;">Showing 4 of 24 companies</div>
 
@@ -507,30 +515,6 @@ With a range of excellent features at an affordable price, Copley Court is desig
   <h3 style="font-size: 1.2rem; margin-top: 40px;">📋 Global Interaction Log</h3>
   <div id="global-log" style="font-family: monospace; background: #f5f5f5; padding: 10px; border: 1px solid #ccc; max-height: 300px; overflow-y: auto;">Waiting for events...</div>
   <button onclick="window.location.href='analytics.html'" style="margin-top: 10px; padding: 8px 14px; border: none; background: #2563eb; color: white; border-radius: 6px; cursor: pointer;">Open Analytics</button>
-<script>
-  const colorMap = {
-    "open": "blue",
-    "follow up": "green",
-    "call back": "gold",
-    "not interested": "red"
-  };
 
-  function updateSelectBackground(select) {
-    const color = colorMap[select.value] || "white";
-    select.style.backgroundColor = color;
-    select.style.color = (color === 'yellow' || color === 'gold') ? 'black' : 'white';
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.status-select').forEach(select => {
-      // Set default color
-      updateSelectBackground(select);
-
-      // Set color on change
-      select.addEventListener('change', () => updateSelectBackground(select));
-    });
-  });
-</script>
 </body>
 </html>
-

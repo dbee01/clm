@@ -1,3 +1,50 @@
+const colorMap = {
+    "open": "blue",
+    "follow up": "green",
+    "call back": "gold",
+    "not interested": "red"
+  };
+    document.querySelectorAll('.svg-phone').forEach(function(span) {
+      span.addEventListener('click', function() {
+        span.classList.toggle('clicked');
+      });
+    });
+  function updateSelectBackground(select) {
+    const color = colorMap[select.value] || "white";
+    select.style.backgroundColor = color;
+    select.style.color = (color === 'yellow' || color === 'gold') ? 'black' : 'white';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.status-select').forEach(select => {
+      // Set default color
+      updateSelectBackground(select);
+
+      // Set color on change
+      select.addEventListener('change', () => updateSelectBackground(select));
+    });
+
+    // 4. Optional: Ripple effect for icon buttons on click
+    document.querySelectorAll('.icon-btn').forEach(btn => {
+      btn.addEventListener('mousedown', function(e) {
+        btn.classList.add('active');
+      });
+      btn.addEventListener('mouseup', function(e) {
+        btn.classList.remove('active');
+      });
+      btn.addEventListener('mouseleave', function(e) {
+        btn.classList.remove('active');
+      });
+      // Accessible focus
+      btn.addEventListener('focus', function() {
+        btn.style.boxShadow = '0 0 0 2px #3b82f644';
+      });
+      btn.addEventListener('blur', function() {
+        btn.style.boxShadow = '';
+      });
+    });
+  });
+
 function writeToGlobalLog(message) {
   const log = document.getElementById("global-log");
   const timestamp = new Date().toLocaleString();
