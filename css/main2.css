@@ -1,0 +1,75 @@
+:root {
+    --color-primary: #4a90e2; /* Primary color */
+    --color-secondary: #50e3c2; /* Secondary color */
+    --color-tertiary: #f5a623; /* Tertiary color */
+    --color-background: #f4f4f4; /* Background color */
+    --color-text: #333; /* Text color */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 20px;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.styled-table thead {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.styled-table tbody tr {
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.styled-table tbody tr:hover {
+    background-color: var(--color-tertiary);
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.styled-table th {
+    position: relative;
+    padding: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.styled-table th::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateY(50%);
+    border-radius: 2px;
+}
+
+.styled-table i {
+    margin-right: 8px;
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+.styled-table i:hover {
+    color: var(--color-tertiary);
+}
