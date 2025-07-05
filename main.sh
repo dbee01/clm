@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Usage: ./main.sh input.ndjson html/main.html output/keiste.html
 
 if [ "$#" -ne 3 ]; then
