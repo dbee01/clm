@@ -54,7 +54,7 @@ jq -c '.' "$INPUT" | while read -r row; do
         "name")
             html="$value"
             ;;
-	"website")
+	    "website")
         if [ -n "$value" ] && [ "$value" != "null" ]; then
           domain=$(echo "$value" | awk -F/ '{print $3}')
           html="<a href=\"$value\" target=\"_blank\" class=\"website-link\" style=\"$BASE_STYLE\"><span style=\"$ICON_STYLE\">$svg_web</span></a>"
@@ -64,7 +64,7 @@ jq -c '.' "$INPUT" | while read -r row; do
         ;;
       "phone")
         if [ -n "$value" ] && [ "$value" != "null" ]; then
-	  digits=$(echo "$value" | sed -E 's/[^0-9]//g' | sed -E 's/^0*//')
+          digits=$(echo "$value" | sed -E 's/[^0-9]//g' | sed -E 's/^0*//')
           html="<a href=\"tel:00353$digits\" class=\"phone-link\" style=\"$BASE_STYLE\" data-number=\"$value\"><span style=\"$ICON_STYLE\">$svg_phone</span></a>"
         else
           html=""

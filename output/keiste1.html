@@ -171,6 +171,58 @@
       border-radius: 5px;
       outline: none;
     }
+    .icon-btn:hover {
+      background: #e0e7ef;
+      box-shadow: 0 1px 5px rgba(59,130,246,0.10);
+    }
+    .icon-btn:active {
+      background: #2563eb;
+    }
+    .icon-btn svg {
+      transition: filter 0.2s, fill 0.2s;
+      fill: #3b82f6;
+      width: 1.2em;
+      height: 1.2em;
+      vertical-align: middle;
+      filter: drop-shadow(0 1px 1px #60a5fa33);
+    }
+    .icon-btn:hover svg {
+      fill: #2563eb;
+      filter: drop-shadow(0 2px 2px #2563eb33);
+    }
+    .icon-btn:active svg {
+      fill: #fff;
+      filter: none;
+    }
+    .phone-link:link {
+      color: blue!important;
+    }
+    .phone-link:hover, .phone-link:active {
+      color: red!important;
+      fill: red!important;
+    }
+    .phone-link {
+      color: orange;
+    }
+    .svg-web.clicked svg {
+      fill: orange;
+    }
+    .svg-phone.clicked svg {
+      fill: orange;
+    }
+    .svg-email.clicked svg {
+      fill: orange;
+    }
+
+    .website-link svg {
+      color: blue!important;
+    }
+    .website-link:hover svg {
+      color: red!important;
+    }
+    .star {
+      color: gold!important;
+    }
 
     /* 3. X-axis scroll for table */
     .table-x-scroll {
@@ -183,27 +235,7 @@
       min-width: 950px;
     }
     
-  /* Website link hover and visited */
-  a.website-link:hover svg {
-    color: orange;
-    fill: orange;
-  }
 
-  a.website-link:visited svg {
-    color: red;
-    fill: red;
-  }
-
-  /* Phone link hover and visited */
-  a.phone-link:hover svg {
-    color: orange;
-    fill: orange;
-  }
-
-  a.phone-link:visited svg {
-    color: red;
-    fill: red;
-  }
 </style>
 
 </head>
