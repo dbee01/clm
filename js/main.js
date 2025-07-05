@@ -1,132 +1,141 @@
-const colorMap = {
-    "open": "blue",
-    "follow up": "green",
-    "call back": "gold",
-    "not interested": "red"
+document.addEventListener("DOMContentLoaded", function () {
+  
+  // Status color mapping
+  const statusColors = {
+    "open":    { background: "#3b82f6", color: "white" },
+    "follow up": { background: "#fd7e14", color: "white" },
+    "call back": { background: "#28a745", color: "white" },
+    "not interested": { background: "#dc3545", color: "white" }
   };
-    document.querySelectorAll('.svg-phone').forEach(function(span) {
-      span.addEventListener('click', function() {
-        span.classList.toggle('clicked');
-      });
-    });
-  function updateSelectBackground(select) {
-    const color = colorMap[select.value] || "white";
-    select.style.backgroundColor = color;
-    select.style.color = (color === 'yellow' || color === 'gold') ? 'black' : 'white';
-  }
 
-  document.addEventListener('DOMContentLoaded', function() {
+  function updateStatusSelectColors() {
     document.querySelectorAll('.status-select').forEach(select => {
-      // Set default color
-      updateSelectBackground(select);
-
-      // Set color on change
-      select.addEventListener('change', () => updateSelectBackground(select));
+      const val = select.value;
+      const style = statusColors[val] || { background: "white", color: "#222" };
+      select.style.background = style.background;
+      select.style.color = style.color;
     });
-
-    // 4. Optional: Ripple effect for icon buttons on click
-    document.querySelectorAll('.icon-btn').forEach(btn => {
-      btn.addEventListener('mousedown', function(e) {
-        btn.classList.add('active');
-      });
-      btn.addEventListener('mouseup', function(e) {
-        btn.classList.remove('active');
-      });
-      btn.addEventListener('mouseleave', function(e) {
-        btn.classList.remove('active');
-      });
-      // Accessible focus
-      btn.addEventListener('focus', function() {
-        btn.style.boxShadow = '0 0 0 2px #3b82f644';
-      });
-      btn.addEventListener('blur', function() {
-        btn.style.boxShadow = '';
-      });
-    });
-  });
-
-function writeToGlobalLog(message) {
-  const log = document.getElementById("global-log");
-  const timestamp = new Date().toLocaleString();
-  const user = "user";
-  const entry = `${timestamp} — ${user} — ${message}`;
-  const logLine = document.createElement("div");
-  logLine.textContent = entry;
-  log.appendChild(logLine);
-}
-
-function loadData() {
-  const rows = document.querySelectorAll("#data-table tr[data-key]");
-  rows.forEach(row => {
-    const key = row.getAttribute("data-key");
-    if (!key) return;
-
-    const statusSelect = row.querySelector("select.status-select");
-    const savedStatus = localStorage.getItem(key + "_status");
-    if (statusSelect && savedStatus) {
-      statusSelect.value = savedStatus;
-    }
-
-    const logHistory = row.querySelector(".log-history");
-    if (logHistory) {
-      const savedLog = localStorage.getItem(key + "_log");
-      if (savedLog) {
-        logHistory.innerText = savedLog;
-      }
-    }
-  });
-}
-
-function setupStatusListeners() {
-  const selects = document.querySelectorAll("select.status-select");
-  selects.forEach(select => {
-    select.addEventListener("change", e => {
-      const row = e.target.closest("tr");
-      const key = row.getAttribute("data-key");
-      if (key) {
-        localStorage.setItem(key + "_status", e.target.value);
-        writeToGlobalLog(`status — ${e.target.value}`);
-      }
-    });
-  });
-}
-
-function savePage() {
-  const clone = document.documentElement.cloneNode(true);
-
-  document.querySelectorAll("tr[data-key]").forEach(row => {
-    const key = row.getAttribute("data-key");
-    const clonedRow = clone.querySelector(`tr[data-key='${key}']`);
-    if (!clonedRow) return;
-
-    const status = row.querySelector("select.status-select");
-    const clonedStatus = clonedRow.querySelector("select.status-select");
-    if (status && clonedStatus) {
-      clonedStatus.value = status.value;
-    }
-
-    const log = row.querySelector(".log-history");
-    const clonedLog = clonedRow.querySelector(".log-history");
-    if (log && clonedLog) {
-      clonedLog.innerText = log.innerText;
-    }
-  });
-
-  const originalLog = document.getElementById("global-log");
-  const clonedLog = clone.querySelector("#global-log");
-  if (originalLog && clonedLog) {
-    clonedLog.innerHTML = originalLog.innerHTML;
   }
 
-  const blob = new Blob(["<!DOCTYPE html>\n<html>" + clone.innerHTML + "</html>"], { type: 'text/html' });
-  const link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.download = location.pathname.split("/").pop() || "data.html";
-  link.click();
-}
+  // Initial coloring
+  updateStatusSelectColors();
 
-document.addEventListener("DOMContentLoaded", () => {
-  loadData();
-  setupStatusListeners();
-  setupLogInputs();
+  // Update color on change
+  document.querySelectorAll('.status-select').forEach(select => {
+    select.addEventListener('change', updateStatusSelectColors);
+  });
+
+  const rowsPerPage = 8;
+  const tableBody = document.querySelector("tbody");
+  if (!tableBody) return;
+
+  const rows = Array.from(tableBody.querySelectorAll("tr"));
+  const totalRows = rows.length;
+  const totalPages = Math.ceil(totalRows / rowsPerPage);
+
+  const recordCountDiv = document.getElementById("record-count");
+
+  function showPage(page) {
+    rows.forEach((row, idx) => {
+      row.style.display = (idx >= (page - 1) * rowsPerPage && idx < page * rowsPerPage) ? "" : "none";
+    });
+
+    // Update button styles
+    paginationDiv.querySelectorAll("button.page-btn").forEach(btn => {
+      const btnPage = parseInt(btn.dataset.page, 10);
+      if (btnPage === page) {
+        btn.style.background = "#3b82f6";
+        btn.style.color = "white";
+        btn.style.border = "1px solid #3b82f6";
+      } else {
+        btn.style.background = "white";
+        btn.style.color = "#3b82f6";
+        btn.style.border = "1px solid #ccc";
+      }
+    });
+
+    // Enable/disable prev/next
+    prevBtn.disabled = page === 1;
+    nextBtn.disabled = page === totalPages;
+    prevBtn.style.opacity = page === 1 ? "0.5" : "1";
+    nextBtn.style.opacity = page === totalPages ? "0.5" : "1";
+
+    // Update record count
+    const start = (page - 1) * rowsPerPage + 1;
+    const end = Math.min(page * rowsPerPage, totalRows);
+    recordCountDiv.textContent = `Showing ${start}–${end} of ${totalRows} companies`;
+  }
+
+  // Remove any existing pagination controls
+  document.querySelectorAll(".js-pagination").forEach(el => el.remove());
+
+  // Create pagination controls
+  const paginationDiv = document.createElement("div");
+  paginationDiv.className = "js-pagination";
+  paginationDiv.style.margin = "20px 0 0 0";
+  paginationDiv.style.display = "flex";
+  paginationDiv.style.alignItems = "center";
+
+  // Previous button
+  const prevBtn = document.createElement("button");
+  prevBtn.textContent = "Previous";
+  prevBtn.style.marginRight = "5px";
+  prevBtn.style.padding = "6px 12px";
+  prevBtn.style.border = "1px solid #ccc";
+  prevBtn.style.background = "white";
+  prevBtn.style.borderRadius = "4px";
+  prevBtn.style.cursor = "pointer";
+  prevBtn.addEventListener("click", () => {
+    if (currentPage > 1) {
+      currentPage--;
+      showPage(currentPage);
+    }
+  });
+  paginationDiv.appendChild(prevBtn);
+
+  // Page number buttons
+  let currentPage = 1;
+  for (let i = 1; i <= totalPages; i++) {
+    const btn = document.createElement("button");
+    btn.textContent = i;
+    btn.className = "page-btn";
+    btn.dataset.page = i;
+    btn.style.marginRight = "5px";
+    btn.style.padding = "6px 12px";
+    btn.style.border = i === 1 ? "1px solid #3b82f6" : "1px solid #ccc";
+    btn.style.background = i === 1 ? "#3b82f6" : "white";
+    btn.style.color = i === 1 ? "white" : "#3b82f6";
+    btn.style.borderRadius = "4px";
+    btn.style.cursor = "pointer";
+    btn.addEventListener("click", () => {
+      currentPage = i;
+      showPage(currentPage);
+    });
+    paginationDiv.appendChild(btn);
+  }
+
+  // Next button
+  const nextBtn = document.createElement("button");
+  nextBtn.textContent = "Next";
+  nextBtn.style.marginRight = "5px";
+  nextBtn.style.padding = "6px 12px";
+  nextBtn.style.border = "1px solid #ccc";
+  nextBtn.style.background = "white";
+  nextBtn.style.borderRadius = "4px";
+  nextBtn.style.cursor = "pointer";
+  nextBtn.addEventListener("click", () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      showPage(currentPage);
+    }
+  });
+  paginationDiv.appendChild(nextBtn);
+
+  // Insert pagination controls after the table
+  const table = document.querySelector("table");
+  if (table && totalPages > 1) {
+    table.parentNode.insertBefore(paginationDiv, table.nextSibling);
+  }
+
+  showPage(currentPage);
 });

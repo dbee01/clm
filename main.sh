@@ -1,5 +1,5 @@
 #!/bin/bash
-# Usage: ./main.sh input.ndjson html/main.html output/keiste.html
+# --- Usage: ./main.sh input.ndjson html/main.html output/keiste.html ---
 
 if [ "$#" -ne 3 ]; then
   echo "Usage: $0 input.ndjson html/main.html output/keiste.html"
@@ -100,10 +100,10 @@ jq -c '.' "$INPUT" | while read -r row; do
         if [ -z "$value" ] || [ "$value" = "null" ]; then
           html="no description"
         else
-          html=$(echo "$value" | sed -E 's/([^.]*\.)?.*/\1/')
+          html=$(echo "$value" | awk 'BEGIN{RS="\\."} NR==1{print $0}')
           if [ -z "$html" ]; then html="no description"; fi
         fi
-        ;;
+        ;;      
       "rating")
         td_class="rating-cell"
         rating=${value:-0}
@@ -115,17 +115,17 @@ jq -c '.' "$INPUT" | while read -r row; do
 
         stars_html=""
         for i in $(seq 1 $rating_int); do
-          stars_html="$stars_html<span class=\"star filled\">\&#9733;</span>"
+          stars_html="$stars_html<span class=\"star filled\">&#9733;</span>"
         done
 
         next=$((rating_int + 1))
         if (( $(echo "$rating_frac >= 0.5" | bc -l) )); then
-          stars_html="$stars_html<span class=\"star half\">\&#9733;</span>"
+          stars_html="$stars_html<span class=\"star half\">&#9733;</span>"
           next=$((rating_int + 2))
         fi
 
         for i in $(seq $next 5); do
-          stars_html="$stars_html<span class=\"star\">\&#9734;</span>"
+          stars_html="$stars_html<span class=\"star\">&#9734;</span>"
         done
 
         html="<div class=\"star-rating\">$stars_html</div>"
@@ -140,17 +140,22 @@ done
 # --- Inject table + star CSS into template ---
 mkdir -p "$(dirname "$OUTPUT_HTML")"
 
-awk '
+awk -v table_file="$TABLE_TMP" '
   BEGIN {
+    html_table = ""
     while ((getline line < table_file) > 0) {
       html_table = html_table line "\n"
     }
     close(table_file)
   }
   {
-    gsub(/\{table\}/, html_table)
+    # Replace literal "{table}" with multi-line content
+    while (match($0, /\{table\}/)) {
+      $0 = substr($0, 1, RSTART - 1) html_table substr($0, RSTART + RLENGTH)
+    }
     print
   }
-' table_file="$TABLE_TMP" "$TEMPLATE_HTML" > "$OUTPUT_HTML"
+' "$TEMPLATE_HTML" > "$OUTPUT_HTML"
+
 
 rm "$TABLE_TMP"

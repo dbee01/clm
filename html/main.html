@@ -5,6 +5,7 @@
   <title>Click-to-Call Workspace</title>
   <link rel="stylesheet" href="../css/main.css">
   <script src="../js/main.js"></script>
+  <script src="../js/log.js"></script>
 <style>
 
     body {
@@ -244,12 +245,13 @@
 
     <div style="display: flex; justify-content: space-between; align-items: center; background: linear-gradient(90deg, #3b82f6, #2563eb); color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
       <h2 style="margin: 0; font-size: 1.5rem; font-weight: 700;">Click-to-Call Workspace <span style="color: red;">BETA VERSION</span></h2>
+<!--      
       <div>
-        <button style="background: #60a5fa; border: none; color: white; padding: 8px 14px; margin-left: 10px; border-radius: 6px; font-weight: 500; cursor: pointer;">Add New</button>
         <button style="background: #60a5fa; border: none; color: white; padding: 8px 14px; margin-left: 10px; border-radius: 6px; font-weight: 500; cursor: pointer;">Export</button>
       </div>
-    </div>
+-->  
 
+    </div>
     <div style="font-weight: 600; font-size: 1.2rem; margin-bottom: 10px;">Company Records</div>
 <!--
     <div style="margin-bottom: 20px;">
@@ -271,7 +273,7 @@
             <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Competitors</th>
             <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Status</th>
             <th style="background: #3b82f6; color: white; text-align: left; padding: 12px; font-weight: 600;">Notes</th>
-            <th style="background: #3b82f6; color: white; text-align: center; padding: 12px; font-weight: 600;">Actions</th>
+        
           </tr>
         </thead>
         <tbody>
@@ -281,16 +283,8 @@
       </table>
     </div>
 
-    <div style="font-size: 0.9rem; color: #6b7280; margin-bottom: 10px;">Showing 4 of 24 companies</div>
-
-    <div>
-      <button style="margin-right: 5px; padding: 6px 12px; border: 1px solid #ccc; background: white; border-radius: 4px; cursor: pointer;">Previous</button>
-      <button style="margin-right: 5px; padding: 6px 12px; border: 1px solid #ccc; background: white; border-radius: 4px; cursor: pointer;">1</button>
-      <button style="margin-right: 5px; padding: 6px 12px; border: 1px solid #3b82f6; background: #3b82f6; color: white; border-radius: 4px; cursor: pointer;">2</button>
-      <button style="margin-right: 5px; padding: 6px 12px; border: 1px solid #ccc; background: white; border-radius: 4px; cursor: pointer;">3</button>
-      <button style="margin-right: 5px; padding: 6px 12px; border: 1px solid #ccc; background: white; border-radius: 4px; cursor: pointer;">Next</button>
-    </div>
-  </div>
+    <div id="record-count" style="font-size: 0.9rem; color: #6b7280; margin-bottom: 10px;">
+      </div>
 
   <h3 style="font-size: 1.2rem; margin-top: 40px;">📋 Global Interaction Log</h3>
   <div id="global-log" style="font-family: monospace; background: #f5f5f5; padding: 10px; border: 1px solid #ccc; max-height: 300px; overflow-y: auto;">Waiting for events...</div>

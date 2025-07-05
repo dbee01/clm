@@ -1,40 +1,59 @@
-function addLog(inputEl) {
-  const row = inputEl.closest("tr");
-  const key = row.getAttribute("data-key");
-  const logDiv = inputEl.nextElementSibling;
-  const newText = inputEl.value.trim();
-  if (newText && key) {
-    const timestamp = new Date().toLocaleString();
-    let existingLogs = localStorage.getItem(key + "_log") || "";
-    existingLogs += `${timestamp}: ${newText}\n`;
-    localStorage.setItem(key + "_log", existingLogs);
-    logDiv.innerText = existingLogs;
-    inputEl.value = "";
-    writeToGlobalLog(`log — ${newText}`);
-  }
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const logContainer = document.getElementById("global-log");
 
-function setupLogInputs() {
-  const inputs = document.querySelectorAll("input.log-input");
-  inputs.forEach(input => {
+  // Get a basic user identifier (replace this with real logic if needed)
+  const user = "User123";
+
+  function logEvent(type, details) {
+    const timestamp = new Date().toLocaleString();
+    const logLine = `${timestamp} | ${user} | ${type} | ${details}`;
+    const lineElem = document.createElement("div");
+    lineElem.textContent = logLine;
+    logContainer.appendChild(lineElem);
+    logContainer.scrollTop = logContainer.scrollHeight;
+  }
+
+  // Link clicks (website)
+  document.querySelectorAll("a.website-link").forEach(link => {
+    link.addEventListener("click", e => {
+      const href = link.getAttribute("href");
+      const name = link.closest("tr")?.getAttribute("data-key") || "Unknown";
+      logEvent("Website Click", `${name} → ${href}`);
+    });
+  });
+
+  // Phone link clicks
+  document.querySelectorAll("a.phone-link").forEach(link => {
+    link.addEventListener("click", e => {
+      const number = link.getAttribute("href");
+      const name = link.closest("tr")?.getAttribute("data-key") || "Unknown";
+      logEvent("Phone Click", `${name} → ${number}`);
+    });
+  });
+
+  // Dropdown menu changes
+  document.querySelectorAll("select.status-select").forEach(select => {
+    select.addEventListener("change", e => {
+      const selected = select.value;
+      const name = select.closest("tr")?.getAttribute("data-key") || "Unknown";
+      logEvent("Status Change", `${name} → ${selected}`);
+    });
+  });
+
+  // Log text input return (Enter key)
+  document.querySelectorAll("input.log-input").forEach(input => {
     input.addEventListener("keydown", e => {
       if (e.key === "Enter") {
         e.preventDefault();
-        addLog(e.target);
+        const text = input.value.trim();
+        if (text !== "") {
+          const name = input.closest("tr")?.getAttribute("data-key") || "Unknown";
+          logEvent("Log Input", `${name} → "${text}"`);
+          input.value = ""; // Clear input
+        }
       }
     });
   });
-}
 
-document.addEventListener("click", function(e) {
-  if (e.target.matches(".phone-link")) {
-    writeToGlobalLog(`phone — ${e.target.dataset.number}`);
-  }
-  if (e.target.matches(".email-link")) {
-    writeToGlobalLog(`email — ${e.target.textContent}`);
-  }
-  if (e.target.matches(".website-link")) {
-    writeToGlobalLog(`website — ${e.target.href}`);
-  }
 });
 
