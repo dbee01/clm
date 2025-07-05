@@ -1,2 +1,3 @@
 # gitignore file
 *.ndjson
+*.code-workspace
