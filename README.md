@@ -22,7 +22,7 @@ https://ibb.co/Vc40d8N2
 
 Live demo:
 
-https://keiste.com/wp-content/uploads/2025/06/keiste.html
+https://keiste.com/wp-content/uploads/2025/07/keiste.html
 
 I'll create your custom list file with data from your chosen target market eg. 'HVAC in Denver' for a small fee. Contact me at info@keiste.com
 
